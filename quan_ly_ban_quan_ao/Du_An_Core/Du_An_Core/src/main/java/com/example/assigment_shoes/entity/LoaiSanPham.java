@@ -1,9 +1,6 @@
 package com.example.assigment_shoes.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
@@ -12,11 +9,16 @@ public class LoaiSanPham {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "maLSP")
     private String maLSP;
 
+    @Column(name = "ten")
     private String ten;
+    @Column(name = "ngayTao")
     private Date ngayTao;
+    @Column(name = "ngaySua")
     private Date ngaySua;
+    @Column(name = "trangThai")
     private int trangThai;
 
     public LoaiSanPham() {
